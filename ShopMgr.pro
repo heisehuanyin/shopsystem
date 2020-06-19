@@ -6,6 +6,8 @@
 
 QT       += core gui
 QT       += sql
+QT       += multimediawidgets
+QT       += sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -26,13 +28,27 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+        common.cpp \
+        hostbase.cpp \
+        itemdetail.cpp \
         main.cpp \
+        picswidget.cpp \
         winframe.cpp
 
 HEADERS += \
+        common.h \
+        hostbase.h \
+        itemdetail.h \
+        picswidget.h \
         winframe.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    resource.qrc
+
+DISTFILES += \
+    readme.md

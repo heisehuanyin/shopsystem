@@ -1,2 +1,5 @@
-<!DOCTYPE RCC>
-<RCC version="1.0"/>
+<RCC>
+    <qresource prefix="/image/items">
+        <file>package.jpeg</file>
+    </qresource>
+</RCC>
